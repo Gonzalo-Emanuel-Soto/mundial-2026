@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mundial FIFA 2026 — Grupos, Estadísticas e Historia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVEGACIÓN -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#inicio" class="nav-logo">
+        <span class="logo-icon">⚽</span>
+        <span>MUNDIAL <strong>2026</strong></span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#grupos">Grupos</a></li>
+        <li><a href="#resultados">Resultados</a></li>
+        <li><a href="#estadisticas">Estadísticas</a></li>
+        <li><a href="#sponsors">Sponsors</a></li>
+        <li><a href="#historia">Historia</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="inicio">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-badge">🔴 EN VIVO — Jornada 1 completada</div>
+      <h1>Copa Mundial de la FIFA<br><span>2026</span></h1>
+      <p class="hero-sub">Estados Unidos · México · Canadá · 48 selecciones · 12 grupos</p>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="stat-num">104</span>
+          <span class="stat-label">Partidos</span>
+        </div>
+        <div class="hero-stat">
+          <span class="stat-num">48</span>
+          <span class="stat-label">Selecciones</span>
+        </div>
+        <div class="hero-stat">
+          <span class="stat-num">12</span>
+          <span class="stat-label">Grupos</span>
+        </div>
+        <div class="hero-stat">
+          <span class="stat-num">16</span>
+          <span class="stat-label">Sedes</span>
+        </div>
+      </div>
+      <a href="#grupos" class="btn-primary">Ver Grupos</a>
+    </div>
+    <div class="hero-flags">
+      <span>🇺🇸</span><span>🇲🇽</span><span>🇨🇦</span>
+    </div>
+  </header>
+
+  <!-- GRUPOS -->
+  <section class="section grupos-section" id="grupos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Fase de Grupos</span>
+        <h2>Tabla de Posiciones</h2>
+        <p>Actualizado al <strong>18 de junio de 2026</strong> — Jornada 1 completada</p>
+      </div>
+
+      <div class="group-filter">
+        <button class="filter-btn active" data-group="all">Todos</button>
+        <button class="filter-btn" data-group="A">A</button>
+        <button class="filter-btn" data-group="B">B</button>
+        <button class="filter-btn" data-group="C">C</button>
+        <button class="filter-btn" data-group="D">D</button>
+        <button class="filter-btn" data-group="E">E</button>
+        <button class="filter-btn" data-group="F">F</button>
+        <button class="filter-btn" data-group="G">G</button>
+        <button class="filter-btn" data-group="H">H</button>
+        <button class="filter-btn" data-group="I">I</button>
+        <button class="filter-btn" data-group="J">J</button>
+        <button class="filter-btn" data-group="K">K</button>
+        <button class="filter-btn" data-group="L">L</button>
+      </div>
+
+      <div class="groups-grid" id="groupsGrid"></div>
+    </div>
+  </section>
+
+  <!-- RESULTADOS -->
+  <section class="section resultados-section" id="resultados">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Jornada 1</span>
+        <h2>Resultados Destacados</h2>
+        <p>Los partidos más importantes de la primera fecha</p>
+      </div>
+      <div class="results-grid" id="resultsGrid"></div>
+    </div>
+  </section>
+
+  <!-- ESTADÍSTICAS -->
+  <section class="section stats-section" id="estadisticas">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Números del Torneo</span>
+        <h2>Estadísticas Generales</h2>
+        <p>Datos clave tras la primera jornada de la fase de grupos</p>
+      </div>
+
+      <div class="stats-overview">
+        <div class="stat-card highlight">
+          <div class="stat-icon">🥅</div>
+          <div class="stat-value" id="totalGoals">—</div>
+          <div class="stat-desc">Goles totales</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">⚽</div>
+          <div class="stat-value">7-1</div>
+          <div class="stat-desc">Mayor goleada (Alemania vs Curazao)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🏆</div>
+          <div class="stat-value">24</div>
+          <div class="stat-desc">Clasificados a 16avos (provisional)</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">📅</div>
+          <div class="stat-value">27 Jun</div>
+          <div class="stat-desc">Fin de fase de grupos</div>
+        </div>
+      </div>
+
+      <div class="stats-tables">
+        <div class="stats-table-wrap">
+          <h3>⚽ Tabla de Goleadores</h3>
+          <table class="stats-table">
+            <thead>
+              <tr><th>#</th><th>Jugador</th><th>Selección</th><th>Goles</th></tr>
+            </thead>
+            <tbody id="scorersTable"></tbody>
+          </table>
+        </div>
+        <div class="stats-table-wrap">
+          <h3>📊 Mejores Diferencias de Gol</h3>
+          <table class="stats-table">
+            <thead>
+              <tr><th>#</th><th>Selección</th><th>Grupo</th><th>DG</th><th>Pts</th></tr>
+            </thead>
+            <tbody id="dgTable"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPONSORS -->
+  <section class="section sponsors-section" id="sponsors">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Partners Oficiales</span>
+        <h2>Sponsors del Mundial 2026</h2>
+        <p>Hacé clic en cada marca para visitar su sitio oficial</p>
+      </div>
+
+      <div class="sponsor-tier">
+        <h3 class="tier-title">Sponsors Globales FIFA</h3>
+        <div class="sponsors-grid global">
+          <a href="https://www.adidas.com" target="_blank" rel="noopener noreferrer" class="sponsor-card">
+            <div class="sponsor-img-wrap">
+              <img src="https://logo.clearbit.com/adidas.com" alt="adidas" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+              <span class="sponsor-name" style="display:none">adidas</span>
+            </div>
+            <span class="sponsor-name">adidas</span>
+            <p>Equipamiento oficial y balón Trionda</p>
+          </a>
+          <a href="https://www.coca-cola.com" target="_blank" rel="noopener noreferrer" class="sponsor-card">
+            <div class="sponsor-img-wrap">
+              <img src="https://logo.clearbit.com/coca-cola.com" alt="Coca-Cola" onerror="this.style.display='none'">
+            </div>
+            <span class="sponsor-name">Coca-Cola</span>
+            <p>Bebida oficial del Mundial</p>
+          </a>
+          <a href="https://www.qatarairways.com" target="_blank" rel="noopener noreferrer" class="sponsor-card">
+            <div class="sponsor-img-wrap">
+              <img src="https://logo.clearbit.com/qatarairways.com" alt="Qatar Airways" onerror="this.style.display='none'">
+            </div>
+            <span class="sponsor-name">Qatar Airways</span>
+            <p>Aerolínea oficial FIFA</p>
+          </a>
+          <a href="https://www.visa.com" target="_blank" rel="noopener noreferrer" class="sponsor-card">
+            <div class="sponsor-img-wrap">
+              <img src="https://logo.clearbit.com/visa.com" alt="Visa" onerror="this.style.display='none'">
+            </div>
+            <span class="sponsor-name">Visa</span>
+            <p>Pagos y servicios financieros</p>
+          </a>
+          <a href="https://www.wanda.cn" target="_blank" rel="noopener noreferrer" class="sponsor-card">
+            <div class="sponsor-img-wrap">
+              <img src="https://logo.clearbit.com/wanda.cn" alt="Wanda Group" onerror="this.style.display='none'">
+            </div>
+            <span class="sponsor-name">Wanda Group</span>
+            <p>Patrocinador global FIFA</p>
+          </a>
+          <a href="https://www.hisense.com" target="_blank" rel="noopener noreferrer" class="sponsor-card">
+            <div class="sponsor-img-wrap">
+              <img src="https://logo.clearbit.com/hisense.com" alt="Hisense" onerror="this.style.display='none'">
+            </div>
+            <span class="sponsor-name">Hisense</span>
+            <p>Tecnología y entretenimiento</p>
+          </a>
+          <a href="https://www.vivo.com" target="_blank" rel="noopener noreferrer" class="sponsor-card">
+            <div class="sponsor-img-wrap">
+              <img src="https://logo.clearbit.com/vivo.com" alt="vivo" onerror="this.style.display='none'">
+            </div>
+            <span class="sponsor-name">vivo</span>
+            <p>Telecomunicaciones móviles</p>
+          </a>
+          <a href="https://www.byd.com" target="_blank" rel="noopener noreferrer" class="sponsor-card">
+            <div class="sponsor-img-wrap">
+              <img src="https://logo.clearbit.com/byd.com" alt="BYD" onerror="this.style.display='none'">
+            </div>
+            <span class="sponsor-name">BYD</span>
+            <p>Movilidad sostenible oficial</p>
+          </a>
+        </div>
+      </div>
+
+      <div class="sponsor-tier">
+        <h3 class="tier-title">Sponsors Regionales — Norteamérica 2026</h3>
+        <div class="sponsors-grid regional">
+          <a href="https://www.bankofamerica.com" target="_blank" rel="noopener noreferrer" class="sponsor-card regional">
+            <div class="sponsor-img-wrap">
+              <img src="https://logo.clearbit.com/bankofamerica.com" alt="Bank of America" onerror="this.style.display='none'">
+            </div>
+            <span class="sponsor-name">Bank of America</span>
+            <p>Sponsor regional EE.UU.</p>
+          </a>
+          <a href="https://www.fritolay.com" target="_blank" rel="noopener noreferrer" class="sponsor-card regional">
+            <div class="sponsor-img-wrap">
+              <img src="https://logo.clearbit.com/fritolay.com" alt="Frito-Lay" onerror="this.style.display='none'">
+            </div>
+            <span class="sponsor-name">Frito-Lay</span>
+            <p>Snacks oficiales del torneo</p>
+          </a>
+          <a href="https://www.grupomodelo.com" target="_blank" rel="noopener noreferrer" class="sponsor-card regional">
+            <div class="sponsor-img-wrap">
+              <img src="https://logo.clearbit.com/grupomodelo.com" alt="Grupo Modelo" onerror="this.style.display='none'">
+            </div>
+            <span class="sponsor-name">Grupo Modelo</span>
+            <p>Cerveza oficial en México</p>
+          </a>
+          <a href="https://www.rogers.com" target="_blank" rel="noopener noreferrer" class="sponsor-card regional">
+            <div class="sponsor-img-wrap">
+              <img src="https://logo.clearbit.com/rogers.com" alt="Rogers" onerror="this.style.display='none'">
+            </div>
+            <span class="sponsor-name">Rogers</span>
+            <p>Telecomunicaciones Canadá</p>
+          </a>
+          <a href="https://www.delta.com" target="_blank" rel="noopener noreferrer" class="sponsor-card regional">
+            <div class="sponsor-img-wrap">
+              <img src="https://logo.clearbit.com/delta.com" alt="Delta Air Lines" onerror="this.style.display='none'">
+            </div>
+            <span class="sponsor-name">Delta Air Lines</span>
+            <p>Transporte aéreo oficial</p>
+          </a>
+          <a href="https://crypto.com" target="_blank" rel="noopener noreferrer" class="sponsor-card regional">
+            <div class="sponsor-img-wrap">
+              <img src="https://logo.clearbit.com/crypto.com" alt="Crypto.com" onerror="this.style.display='none'">
+            </div>
+            <span class="sponsor-name">Crypto.com</span>
+            <p>Plataforma digital y cripto</p>
+          </a>
+        </div>
+      </div>
+
+      <div class="sponsor-tier">
+        <h3 class="tier-title">Proveedores Oficiales</h3>
+        <div class="sponsors-row">
+          <a href="https://www.hyundai.com" target="_blank" rel="noopener noreferrer" class="sponsor-pill">
+            <img src="https://logo.clearbit.com/hyundai.com" alt=""> Hyundai
+          </a>
+          <a href="https://www.kia.com" target="_blank" rel="noopener noreferrer" class="sponsor-pill">
+            <img src="https://logo.clearbit.com/kia.com" alt=""> Kia
+          </a>
+          <a href="https://www.mcdonalds.com" target="_blank" rel="noopener noreferrer" class="sponsor-pill">
+            <img src="https://logo.clearbit.com/mcdonalds.com" alt=""> McDonald's
+          </a>
+          <a href="https://www.mengniu.com.cn" target="_blank" rel="noopener noreferrer" class="sponsor-pill">
+            <img src="https://logo.clearbit.com/mengniu.com.cn" alt=""> Mengniu
+          </a>
+          <a href="https://www.ea.com/games/ea-sports-fc" target="_blank" rel="noopener noreferrer" class="sponsor-pill">
+            <img src="https://logo.clearbit.com/ea.com" alt=""> EA Sports FC
+          </a>
+          <a href="https://www.lenovo.com" target="_blank" rel="noopener noreferrer" class="sponsor-pill">
+            <img src="https://logo.clearbit.com/lenovo.com" alt=""> Lenovo
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HISTORIA -->
+  <section class="section historia-section" id="historia">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Legado</span>
+        <h2>Historias de Mundiales Anteriores</h2>
+        <p>22 ediciones de gloria, drama y leyendas que forjaron el fútbol moderno</p>
+      </div>
+
+      <div class="champions-banner">
+        <p class="champions-banner-title">🏆 TODOS LOS CAMPEONES DEL MUNDO</p>
+        <div class="champion-chip"><span class="chip-year">1930</span><span class="chip-flag">🇺🇾</span><span class="chip-team">Uruguay</span></div>
+        <div class="champion-chip"><span class="chip-year">1934</span><span class="chip-flag">🇮🇹</span><span class="chip-team">Italia</span></div>
+        <div class="champion-chip"><span class="chip-year">1938</span><span class="chip-flag">🇮🇹</span><span class="chip-team">Italia</span></div>
+        <div class="champion-chip"><span class="chip-year">1950</span><span class="chip-flag">🇺🇾</span><span class="chip-team">Uruguay</span></div>
+        <div class="champion-chip"><span class="chip-year">1954</span><span class="chip-flag">🇩🇪</span><span class="chip-team">Alemania</span></div>
+        <div class="champion-chip"><span class="chip-year">1958</span><span class="chip-flag">🇧🇷</span><span class="chip-team">Brasil</span></div>
+        <div class="champion-chip"><span class="chip-year">1962</span><span class="chip-flag">🇧🇷</span><span class="chip-team">Brasil</span></div>
+        <div class="champion-chip"><span class="chip-year">1966</span><span class="chip-flag">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span><span class="chip-team">Inglaterra</span></div>
+        <div class="champion-chip"><span class="chip-year">1970</span><span class="chip-flag">🇧🇷</span><span class="chip-team">Brasil</span></div>
+        <div class="champion-chip"><span class="chip-year">1974</span><span class="chip-flag">🇩🇪</span><span class="chip-team">Alemania</span></div>
+        <div class="champion-chip"><span class="chip-year">1978</span><span class="chip-flag">🇦🇷</span><span class="chip-team">Argentina</span></div>
+        <div class="champion-chip"><span class="chip-year">1982</span><span class="chip-flag">🇮🇹</span><span class="chip-team">Italia</span></div>
+        <div class="champion-chip"><span class="chip-year">1986</span><span class="chip-flag">🇦🇷</span><span class="chip-team">Argentina</span></div>
+        <div class="champion-chip"><span class="chip-year">1990</span><span class="chip-flag">🇩🇪</span><span class="chip-team">Alemania</span></div>
+        <div class="champion-chip"><span class="chip-year">1994</span><span class="chip-flag">🇧🇷</span><span class="chip-team">Brasil</span></div>
+        <div class="champion-chip"><span class="chip-year">1998</span><span class="chip-flag">🇫🇷</span><span class="chip-team">Francia</span></div>
+        <div class="champion-chip"><span class="chip-year">2002</span><span class="chip-flag">🇧🇷</span><span class="chip-team">Brasil</span></div>
+        <div class="champion-chip"><span class="chip-year">2006</span><span class="chip-flag">🇮🇹</span><span class="chip-team">Italia</span></div>
+        <div class="champion-chip"><span class="chip-year">2010</span><span class="chip-flag">🇪🇸</span><span class="chip-team">España</span></div>
+        <div class="champion-chip"><span class="chip-year">2014</span><span class="chip-flag">🇩🇪</span><span class="chip-team">Alemania</span></div>
+        <div class="champion-chip"><span class="chip-year">2018</span><span class="chip-flag">🇫🇷</span><span class="chip-team">Francia</span></div>
+        <div class="champion-chip"><span class="chip-year">2022</span><span class="chip-flag">🇦🇷</span><span class="chip-team">Argentina</span></div>
+        <div class="champion-chip" style="border:1px solid var(--fifa-gold)"><span class="chip-year">2026</span><span class="chip-flag">❓</span><span class="chip-team">En juego</span></div>
+      </div>
+
+      <div class="timeline">
+
+        <article class="timeline-card era-1930" data-year="1930">
+          <div class="timeline-year">1930</div>
+          <div class="timeline-content">
+            <div class="timeline-banner"><h3>El Nacimiento de un Sueño</h3><span class="trophy">🏆</span></div>
+            <div class="timeline-body">
+              <p class="timeline-place">🇺🇾 Montevideo, Uruguay · 13 selecciones</p>
+              <p>El visionario Jules Rimet convenció al mundo de que el fútbol necesitaba su propio campeonato planetario. Uruguay, campeón olímpico y anfitrión, derrotó a Argentina 4-2 en la final del Estadio Centenario ante 68.000 personas. Nació la competición más vista del planeta.</p>
+              <div class="timeline-meta">
+                <div class="meta-item"><span class="meta-label">Campeón</span><span class="meta-value">🇺🇾 Uruguay</span></div>
+                <div class="meta-item"><span class="meta-label">Final</span><span class="meta-value">Uruguay 4-2 Argentina</span></div>
+                <div class="meta-item"><span class="meta-label">Goleador</span><span class="meta-value">Guillermo Stábile (8)</span></div>
+                <div class="meta-item"><span class="meta-label">Partidos</span><span class="meta-value">18</span></div>
+              </div>
+              <blockquote class="timeline-quote">"Otros juegos internacionales existían, pero ninguno tenía el peso de representar al mundo entero." — Jules Rimet</blockquote>
+              <div class="timeline-fact"><strong>Legado:</strong> El trofeo original "Victory" lleva el nombre de Rimet. Fue robado en 1983 y nunca recuperado.</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline-card era-1950" data-year="1950">
+          <div class="timeline-year">1950</div>
+          <div class="timeline-content">
+            <div class="timeline-banner"><h3>El Maracanazo</h3><span class="trophy">💔</span></div>
+            <div class="timeline-body">
+              <p class="timeline-place">🇧🇷 Río de Janeiro, Brasil · 13 selecciones</p>
+              <p>Brasil necesitaba un empate para ser campeón en casa. Uruguay, con 11 hombres en el campo tras una lesión, remontó gracias al gol de Alcides Ghiggia al minuto 79. El Maracaná, con casi 200.000 almas, quedó en un silencio sepulcral. Brasil abandonó su camiseta blanca y adoptó el amarillo que conocemos hoy.</p>
+              <div class="timeline-meta">
+                <div class="meta-item"><span class="meta-label">Campeón</span><span class="meta-value">🇺🇾 Uruguay</span></div>
+                <div class="meta-item"><span class="meta-label">Partido decisivo</span><span class="meta-value">Brasil 1-2 Uruguay</span></div>
+                <div class="meta-item"><span class="meta-label">Goleador</span><span class="meta-value">Ademir (9)</span></div>
+                <div class="meta-item"><span class="meta-label">Formato</span><span class="meta-value">Grupo final (sin final)</span></div>
+              </div>
+              <blockquote class="timeline-quote">"Solo tres personas silenciaron al Maracaná: el Papa, Frank Sinatra y Alcides Ghiggia." — Narrador uruguayo</blockquote>
+              <div class="timeline-fact"><strong>Curiosidad:</strong> Ghiggia dijo años después: "Cuando morí, solo tres personas silenciaron al Maracaná. Yo fui una de ellas."</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline-card era-1966" data-year="1966">
+          <div class="timeline-year">1966</div>
+          <div class="timeline-content">
+            <div class="timeline-banner"><h3>El Mundial de Wembley</h3><span class="trophy">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span></div>
+            <div class="timeline-body">
+              <p class="timeline-place">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Inglaterra · 16 selecciones</p>
+              <p>Geoff Hurst se convirtió en el único jugador en anotar un hat-trick en una final de Mundial. Su segundo gol, que rebotó en el travesaño, sigue siendo debatido hasta hoy: ¿había cruzado completamente la línea? Inglaterra venció a Alemania 4-2 en la prórroga y el país inventó del fútbol conquistó su única estrella.</p>
+              <div class="timeline-meta">
+                <div class="meta-item"><span class="meta-label">Campeón</span><span class="meta-value">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Inglaterra</span></div>
+                <div class="meta-item"><span class="meta-label">Final</span><span class="meta-value">Inglaterra 4-2 Alemania</span></div>
+                <div class="meta-item"><span class="meta-label">Goleador</span><span class="meta-value">Eusébio (9)</span></div>
+                <div class="meta-item"><span class="meta-label">Mascota</span><span class="meta-value">World Cup Willie</span></div>
+              </div>
+              <div class="timeline-fact"><strong>Legado:</strong> Primer Mundial con mascota oficial. El VAR de 2018 confirmaría que el gol de Hurst era legal.</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline-card era-1970" data-year="1970">
+          <div class="timeline-year">1970</div>
+          <div class="timeline-content">
+            <div class="timeline-banner"><h3>El Fútbol Hecho Arte</h3><span class="trophy">🇧🇷</span></div>
+            <div class="timeline-body">
+              <p class="timeline-place">🇲🇽 México · 16 selecciones</p>
+              <p>El Brasil de Pelé, Gérson, Jairzinho y Rivelino es considerado el mejor equipo de la historia. Jairzinho anotó en todos los partidos del torneo. La final 4-1 ante Italia cerró con el gol de Carlos Alberto tras una jugada colectiva de 9 toques, catalogado como el más bello de todos los mundiales. Pelé levantó su tercera copa y se retiró del fútbol internacional.</p>
+              <div class="timeline-meta">
+                <div class="meta-item"><span class="meta-label">Campeón</span><span class="meta-value">🇧🇷 Brasil (3° título)</span></div>
+                <div class="meta-item"><span class="meta-label">Final</span><span class="meta-value">Brasil 4-1 Italia</span></div>
+                <div class="meta-item"><span class="meta-label">Goleador</span><span class="meta-value">Gerd Müller (10)</span></div>
+                <div class="meta-item"><span class="meta-label">Innovación</span><span class="meta-value">TV en color</span></div>
+              </div>
+              <blockquote class="timeline-quote">"Pelé marcó el fútbol para siempre. Sin él, el deporte no sería lo que es." — Franz Beckenbauer</blockquote>
+              <div class="timeline-fact"><strong>Legado:</strong> Brasil ganó el derecho a quedarse el trofeo Jules Rimet permanentemente al ser tricampeón.</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline-card era-1974" data-year="1974">
+          <div class="timeline-year">1974</div>
+          <div class="timeline-content">
+            <div class="timeline-banner"><h3>Total Football</h3><span class="trophy">🇳🇱</span></div>
+            <div class="timeline-body">
+              <p class="timeline-place">🇩🇪 Alemania Occidental · 16 selecciones</p>
+              <p>Holanda revolucionó el fútbol con el "fútbol total" de Cruyff, pero Alemania le arrebató el título con un penal polémico de Paul Breitner y el gol decisivo de Gerd Müller. Fue el primer Mundial con el trofeo actual, la Copa de la FIFA, y el primero con el himno oficial compuesto por los Rolling Stones.</p>
+              <div class="timeline-meta">
+                <div class="meta-item"><span class="meta-label">Campeón</span><span class="meta-value">🇩🇪 Alemania</span></div>
+                <div class="meta-item"><span class="meta-label">Final</span><span class="meta-value">Alemania 2-1 Holanda</span></div>
+                <div class="meta-item"><span class="meta-label">Goleador</span><span class="meta-value">Grzegorz Lato (7)</span></div>
+                <div class="meta-item"><span class="meta-label">Estrella</span><span class="meta-value">Johan Cruyff</span></div>
+              </div>
+              <div class="timeline-fact"><strong>Legado:</strong> El "fútbol total" holandés influenció tácticamente a todos los equipos que vinieron después.</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline-card era-1982" data-year="1982">
+          <div class="timeline-year">1982</div>
+          <div class="timeline-content">
+            <div class="timeline-banner"><h3>El Mundial de España</h3><span class="trophy">🇮🇹</span></div>
+            <div class="timeline-body">
+              <p class="timeline-place">🇪🇸 España · 24 selecciones (ampliado)</p>
+              <p>Por primera vez participaron 24 equipos. Italia llegó al torneo con escándalos de apuestas (Totónazo) y se reinventó bajo Bearzot. Paolo Rossi, suspendido y rehabilitado, anotó un hat-trick contra Brasil en uno de los mejores partidos de la historia y definió la final 3-1 ante Alemania. Un campeón improbable que demostró que en el fútbol nada está escrito.</p>
+              <div class="timeline-meta">
+                <div class="meta-item"><span class="meta-label">Campeón</span><span class="meta-value">🇮🇹 Italia (3° título)</span></div>
+                <div class="meta-item"><span class="meta-label">Final</span><span class="meta-value">Italia 3-1 Alemania</span></div>
+                <div class="meta-item"><span class="meta-label">Goleador</span><span class="meta-value">Paolo Rossi (6)</span></div>
+                <div class="meta-item"><span class="meta-label">Partido clave</span><span class="meta-value">Italia 3-2 Brasil</span></div>
+              </div>
+              <div class="timeline-fact"><strong>Legado:</strong> El gol de Rossi contra Brasil es considerado el partido que cambió el destino del torneo.</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline-card era-1986" data-year="1986">
+          <div class="timeline-year">1986</div>
+          <div class="timeline-content">
+            <div class="timeline-banner"><h3>La Mano de Dios</h3><span class="trophy">🇦🇷</span></div>
+            <div class="timeline-body">
+              <p class="timeline-place">🇲🇽 México · 24 selecciones</p>
+              <p>Diego Armando Maradona dominó el torneo como nadie antes. En cuartos ante Inglaterra, en 4 minutos anotó con la mano ("la Mano de Dios") y luego el "Gol del Siglo", esquivando a medio equipo inglés. Argentina venció a Alemania 3-2 en el Azteca y Maradona levantó la copa ante 115.000 personas. Un Mundial que trascendió el deporte y se convirtió en fenómeno cultural global.</p>
+              <div class="timeline-meta">
+                <div class="meta-item"><span class="meta-label">Campeón</span><span class="meta-value">🇦🇷 Argentina (2° título)</span></div>
+                <div class="meta-item"><span class="meta-label">Final</span><span class="meta-value">Argentina 3-2 Alemania</span></div>
+                <div class="meta-item"><span class="meta-label">Goleador</span><span class="meta-value">Gary Lineker (6)</span></div>
+                <div class="meta-item"><span class="meta-label">MVP</span><span class="meta-value">Diego Maradona</span></div>
+              </div>
+              <blockquote class="timeline-quote">"Fue la Mano de Dios y la cabeza de Maradona." — Diego Maradona, minutos después del gol.</blockquote>
+              <div class="timeline-fact"><strong>Curiosidad:</strong> Colombia debía organizarlo, pero problemas económicos obligaron a México a acoger el torneo por segunda vez.</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline-card era-1998" data-year="1998">
+          <div class="timeline-year">1998</div>
+          <div class="timeline-content">
+            <div class="timeline-banner"><h3>Les Bleus Conquistan París</h3><span class="trophy">🇫🇷</span></div>
+            <div class="timeline-body">
+              <p class="timeline-place">🇫🇷 Francia · 32 selecciones (nuevo formato)</p>
+              <p>Francia organizó la primera Copa de 32 equipos. Zinedine Zidane, hijo de argelinos, se convirtió en héroe nacional con dos cabezazos en la final ante Brasil. El misterio de Ronaldo — quien sufrió una convulsión horas antes del partido — alimenta debates hasta hoy. Francia unió a un país multicultural bajo una sola bandera.</p>
+              <div class="timeline-meta">
+                <div class="meta-item"><span class="meta-label">Campeón</span><span class="meta-value">🇫🇷 Francia (1° título)</span></div>
+                <div class="meta-item"><span class="meta-label">Final</span><span class="meta-value">Francia 3-0 Brasil</span></div>
+                <div class="meta-item"><span class="meta-label">Goleador</span><span class="meta-value">Davor Šuker (6)</span></div>
+                <div class="meta-item"><span class="meta-label">Mascota</span><span class="meta-value">Footix</span></div>
+              </div>
+              <div class="timeline-fact"><strong>Legado:</strong> El equipo francés de 1998, con Zidane, Henry, Thuram y Desailly, simbolizó la diversidad del país.</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline-card era-2002" data-year="2002">
+          <div class="timeline-year">2002</div>
+          <div class="timeline-content">
+            <div class="timeline-banner"><h3>El Mundial de Asia</h3><span class="trophy">🇧🇷</span></div>
+            <div class="timeline-body">
+              <p class="timeline-place">🇰🇷 Corea del Sur · 🇯🇵 Japón · 32 selecciones</p>
+              <p>Primera y única Copa Mundial co-organizada y la primera en Asia. Corea del Sur sorprendió al mundo llegando a semifinales bajo Guus Hiddink, eliminando a Italia y España. Brasil, con Ronaldo recuperado de sus problemas físicos, ganó su quinta estrella venciendo 2-0 a Alemania con dos goles de "El Fenómeno".</p>
+              <div class="timeline-meta">
+                <div class="meta-item"><span class="meta-label">Campeón</span><span class="meta-value">🇧🇷 Brasil (5° título)</span></div>
+                <div class="meta-item"><span class="meta-label">Final</span><span class="meta-value">Brasil 2-0 Alemania</span></div>
+                <div class="meta-item"><span class="meta-label">Goleador</span><span class="meta-value">Ronaldo (8)</span></div>
+                <div class="meta-item"><span class="meta-label">Sorpresa</span><span class="meta-value">🇰🇷 Corea del Sur (4°)</span></div>
+              </div>
+              <div class="timeline-fact"><strong>Legado:</strong> Brasil se convirtió en el único pentacampeón del mundo. Ronaldo resucitó su carrera en este torneo.</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline-card era-2010" data-year="2010">
+          <div class="timeline-year">2010</div>
+          <div class="timeline-content">
+            <div class="timeline-banner"><h3>El Tiki-Taka Campeón</h3><span class="trophy">🇪🇸</span></div>
+            <div class="timeline-body">
+              <p class="timeline-place">🇿🇦 Sudáfrica · 32 selecciones</p>
+              <p>El primer Mundial en África. España, con su estilo de posesión extrema, perdió su primer partido ante Suiza pero se recompuso para ganar cuatro partidos seguidos por 1-0, incluyendo la final ante Holanda. Andrés Iniesta definió en la prórroga del minuto 116. El vuvuzela se convirtió en el sonido icónico — y polémico — del torneo.</p>
+              <div class="timeline-meta">
+                <div class="meta-item"><span class="meta-label">Campeón</span><span class="meta-value">🇪🇸 España (1° título)</span></div>
+                <div class="meta-item"><span class="meta-label">Final</span><span class="meta-value">España 1-0 Holanda</span></div>
+                <div class="meta-item"><span class="meta-label">Goleador</span><span class="meta-value">Diego Forlán, Villa, Müller (5)</span></div>
+                <div class="meta-item"><span class="meta-label">Mascota</span><span class="meta-value">Zakumi</span></div>
+              </div>
+              <blockquote class="timeline-quote">"¡Gol de España! ¡Gol de Iniesta! ¡Gol de todo un país que sale a la calle!" — Andrés Montes</blockquote>
+              <div class="timeline-fact"><strong>Legado:</strong> España es el único campeón mundial que perdió su partido inaugural y aún así ganó el torneo.</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline-card era-2014" data-year="2014">
+          <div class="timeline-year">2014</div>
+          <div class="timeline-content">
+            <div class="timeline-banner"><h3>Mineirazo</h3><span class="trophy">🇩🇪</span></div>
+            <div class="timeline-body">
+              <p class="timeline-place">🇧🇷 Brasil · 32 selecciones</p>
+              <p>El 8 de julio de 2014, Alemania humilló 7-1 a Brasil en Belo Horizonte en la semifinal más impactante de la historia. El Mineirazo dejó a un país en shock. En la final, Mario Götze anotó en la prórroga el único gol ante Argentina. James Rodríguez brilló con 6 goles y se ganó la Bota de Oro, pero su Colombia cayó en cuartos.</p>
+              <div class="timeline-meta">
+                <div class="meta-item"><span class="meta-label">Campeón</span><span class="meta-value">🇩🇪 Alemania (4° título)</span></div>
+                <div class="meta-item"><span class="meta-label">Final</span><span class="meta-value">Alemania 1-0 Argentina</span></div>
+                <div class="meta-item"><span class="meta-label">Goleador</span><span class="meta-value">James Rodríguez (6)</span></div>
+                <div class="meta-item"><span class="meta-label">Semifinal</span><span class="meta-value">Brasil 1-7 Alemania</span></div>
+              </div>
+              <div class="timeline-fact"><strong>Legado:</strong> El 7-1 es la mayor goleada en semifinales de un Mundial y marcó un antes y un después en el fútbol brasileño.</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline-card era-2018" data-year="2018">
+          <div class="timeline-year">2018</div>
+          <div class="timeline-content">
+            <div class="timeline-banner"><h3>Les Bleus Otra Vez</h3><span class="trophy">🇫🇷</span></div>
+            <div class="timeline-body">
+              <p class="timeline-place">🇷🇺 Rusia · 32 selecciones</p>
+              <p>Francia, con una generación joven liderada por Kylian Mbappé (19 años), ganó su segundo título venciendo 4-2 a Croacia en la final. Fue el primer Mundial con VAR, que cambió el fútbol para siempre. Croacia, con Modric como líder indiscutible, sorprendió llegando a la final tras vencer a Inglaterra en semifinales.</p>
+              <div class="timeline-meta">
+                <div class="meta-item"><span class="meta-label">Campeón</span><span class="meta-value">🇫🇷 Francia (2° título)</span></div>
+                <div class="meta-item"><span class="meta-label">Final</span><span class="meta-value">Francia 4-2 Croacia</span></div>
+                <div class="meta-item"><span class="meta-label">Goleador</span><span class="meta-value">Harry Kane (6)</span></div>
+                <div class="meta-item"><span class="meta-label">Balón de Oro</span><span class="meta-value">Luka Modrić</span></div>
+              </div>
+              <div class="timeline-fact"><strong>Legado:</strong> Mbappé se convirtió en el segundo adolescente en anotar en una final de Mundial, tras Pelé en 1958.</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline-card era-2022" data-year="2022">
+          <div class="timeline-year">2022</div>
+          <div class="timeline-content">
+            <div class="timeline-banner"><h3>La Tercera de Messi</h3><span class="trophy">🇦🇷</span></div>
+            <div class="timeline-body">
+              <p class="timeline-place">🇶🇦 Catar · 32 selecciones</p>
+              <p>La final más épica de la historia: Argentina y Francia empataron 3-3 tras un hat-trick de Mbappé en 97 minutos. Messi, con dos goles, lideró a Argentina a su tercera estrella en los penales. Marruecos hizo historia como primer semifinalista africano. El primer Mundial de invierno cerró el debate del mejor jugador de todos los tiempos.</p>
+              <div class="timeline-meta">
+                <div class="meta-item"><span class="meta-label">Campeón</span><span class="meta-value">🇦🇷 Argentina (3° título)</span></div>
+                <div class="meta-item"><span class="meta-label">Final</span><span class="meta-value">Argentina 3-3 Francia (4-2 pen.)</span></div>
+                <div class="meta-item"><span class="meta-label">Goleador</span><span class="meta-value">Kylian Mbappé (8)</span></div>
+                <div class="meta-item"><span class="meta-label">Sorpresa</span><span class="meta-value">🇲🇦 Marruecos (4°)</span></div>
+              </div>
+              <blockquote class="timeline-quote">"Levantar esta copa es lo que soñé toda mi vida." — Lionel Messi, al recibir el trofeo</blockquote>
+              <div class="timeline-fact"><strong>Legado:</strong> Messi completó su colección de títulos y se convirtió en el primer jugador en ganar dos Balones de Oro en años de Mundial.</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="timeline-card featured era-2026" data-year="2026">
+          <div class="timeline-year">2026</div>
+          <div class="timeline-content">
+            <div class="timeline-banner"><h3>El Mundial del Futuro</h3><span class="trophy">🌎</span></div>
+            <div class="timeline-body">
+              <p class="timeline-place">🇺🇸 🇲🇽 🇨🇦 Norteamérica · 48 selecciones · 12 grupos</p>
+              <p>La Copa Mundial más ambiciosa de la historia: 104 partidos, 16 sedes y tres países anfitriones por primera vez. México abrió el torneo con triunfo 2-0 ante Sudáfrica en el mítico Azteca, el único estadio en albergar dos finales de Mundial. Alemania goleó 7-1 a Curazao, Messi anotó hat-trick para Argentina, y 48 sueños compiten por la gloria eterna.</p>
+              <div class="timeline-meta">
+                <div class="meta-item"><span class="meta-label">Formato</span><span class="meta-value">48 equipos · 12 grupos</span></div>
+                <div class="meta-item"><span class="meta-label">Sedes</span><span class="meta-value">16 ciudades</span></div>
+                <div class="meta-item"><span class="meta-label">Final</span><span class="meta-value">19 jul — MetLife Stadium</span></div>
+                <div class="meta-item"><span class="meta-label">Estado</span><span class="meta-value">🔴 En curso</span></div>
+              </div>
+              <div class="timeline-fact"><strong>En vivo:</strong> La fase de grupos termina el 27 de junio. Los 32 mejores avanzan a los 16avos de final. ¿Quién levantará la copa el 19 de julio?</div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo-icon">⚽</span>
+          <h3>Mundial FIFA 2026</h3>
+          <p>Estados Unidos · México · Canadá</p>
+        </div>
+        <div class="footer-links">
+          <h4>Secciones</h4>
+          <a href="#grupos">Grupos</a>
+          <a href="#resultados">Resultados</a>
+          <a href="#estadisticas">Estadísticas</a>
+          <a href="#sponsors">Sponsors</a>
+          <a href="#historia">Historia</a>
+        </div>
+        <div class="footer-info">
+          <h4>Información</h4>
+          <p>48 selecciones · 12 grupos</p>
+          <p>11 jun — 19 jul 2026</p>
+          <p>Actualizado: 18 jun 2026</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Página informativa · Datos de la Jornada 1 de la fase de grupos</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
