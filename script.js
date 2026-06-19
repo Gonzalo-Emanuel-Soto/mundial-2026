@@ -146,8 +146,8 @@ const RESULTS = [
   { group: 'J', home: '🇦🇹 Austria', away: 'Jordania 🇯🇴', score: '3-1', scorers: 'Sabitzer, Alaba, Baumgartner' },
   { group: 'K', home: '🇨🇴 Colombia', away: 'Uzbekistán 🇺🇿', score: '3-1', scorers: 'Díaz (2), James' },
   { group: 'K', home: '🇵🇹 Portugal', away: 'R.D. Congo 🇨🇩', score: '1-1', scorers: 'Ronaldo / Mbemba' },
-  { group: 'L', home: '🏴󠁧󠁢󠁥󠁮󠁧󠁿 Inglaterra', away: 'Panamá 🇵🇦', score: '3-1', scorers: 'Bellingham, Kane, Foden' },
-  { group: 'L', home: '🇬🇭 Ghana', away: 'Croacia 🇭🇷', score: '2-1', scorers: 'Kudus, Partey' },
+  { group: 'L', home: '🏴󠁧󠁢󠁥󠁮󠁧󠁿 Inglaterra', away: 'Croacia 🇭🇷', score: '4-2', scorers: 'Bellingham, Kane (2), Rashford / Baturina, Musa' },
+  { group: 'L', home: '🇬🇭 Ghana', away: 'Panamá 🇵🇦', score: '1-', scorers: 'Yirenkyi' },
 ];
 
 const SCORERS = [
