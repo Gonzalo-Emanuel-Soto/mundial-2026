@@ -147,13 +147,13 @@ const RESULTS = [
   { group: 'K', home: '🇨🇴 Colombia', away: 'Uzbekistán 🇺🇿', score: '3-1', scorers: 'Díaz (2), James' },
   { group: 'K', home: '🇵🇹 Portugal', away: 'R.D. Congo 🇨🇩', score: '1-1', scorers: 'Ronaldo / Mbemba' },
   { group: 'L', home: '🏴󠁧󠁢󠁥󠁮󠁧󠁿 Inglaterra', away: 'Croacia 🇭🇷', score: '4-2', scorers: 'Bellingham, Kane (2), Rashford / Baturina, Musa' },
-  { group: 'L', home: '🇬🇭 Ghana', away: 'Panamá 🇵🇦', score: '1-', scorers: 'Yirenkyi' },
+  { group: 'L', home: '🇬🇭 Ghana', away: 'Panamá 🇵🇦', score: '1-0', scorers: 'Yirenkyi' },
 ];
 
 const SCORERS = [
-  { player: 'Erling Haaland', team: '🇳🇴 Noruega', goals: 3 },
   { player: 'Lionel Messi', team: '🇦🇷 Argentina', goals: 3 },
   { player: 'Kylian Mbappé', team: '🇫🇷 Francia', goals: 2 },
+  { player: 'Erling Haaland', team: '🇳🇴 Noruega', goals: 3 },
   { player: 'Florian Wirtz', team: '🇩🇪 Alemania', goals: 2 },
   { player: 'Alexander Isak', team: '🇸🇪 Suecia', goals: 2 },
   { player: 'Christian Pulisic', team: '🇺🇸 EE.UU.', goals: 2 },
